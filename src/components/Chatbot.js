@@ -1,4 +1,3 @@
-// filepath: /path/to/your-react-project/src/components/Chatbot.js
 import React, { useState } from "react";
 
 function Chatbot() {
@@ -18,6 +17,7 @@ function Chatbot() {
       });
       const data = await res.json();
       setResponse(data.response);
+      console.log("Response from backend:", data.response); // Print the response for debugging
     } catch (error) {
       console.error("Error:", error);
     }
